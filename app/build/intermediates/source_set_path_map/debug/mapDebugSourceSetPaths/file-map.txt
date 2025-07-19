@@ -1,0 +1,43 @@
+net.ace.PixivNovelDownloader.app-fragment-1.3.6-0 C:\Users\ace20\.gradle\caches\8.13\transforms\07022a09de0fcb568d0ee3fd4aab6fb5\transformed\fragment-1.3.6\res
+net.ace.PixivNovelDownloader.app-material-1.10.0-1 C:\Users\ace20\.gradle\caches\8.13\transforms\0b35d110c7162f143e3126ee8bdffc66\transformed\material-1.10.0\res
+net.ace.PixivNovelDownloader.app-lifecycle-process-2.6.1-2 C:\Users\ace20\.gradle\caches\8.13\transforms\0d7a59b95aa9e0f8de1056c011a00d0e\transformed\lifecycle-process-2.6.1\res
+net.ace.PixivNovelDownloader.app-slidingpanelayout-1.2.0-3 C:\Users\ace20\.gradle\caches\8.13\transforms\1477553f6517784bba95b2ea5bdee009\transformed\slidingpanelayout-1.2.0\res
+net.ace.PixivNovelDownloader.app-drawerlayout-1.1.1-4 C:\Users\ace20\.gradle\caches\8.13\transforms\182c02b4e75b3f1f4b11ba8d63f89a4c\transformed\drawerlayout-1.1.1\res
+net.ace.PixivNovelDownloader.app-lifecycle-runtime-2.6.1-5 C:\Users\ace20\.gradle\caches\8.13\transforms\28038b3a33af54e2c57107071383f222\transformed\lifecycle-runtime-2.6.1\res
+net.ace.PixivNovelDownloader.app-core-runtime-2.2.0-6 C:\Users\ace20\.gradle\caches\8.13\transforms\290f153207bd2acb721098424012782d\transformed\core-runtime-2.2.0\res
+net.ace.PixivNovelDownloader.app-transition-1.4.1-7 C:\Users\ace20\.gradle\caches\8.13\transforms\2eb331b88fa707c208a1e28924be766f\transformed\transition-1.4.1\res
+net.ace.PixivNovelDownloader.app-emoji2-1.2.0-8 C:\Users\ace20\.gradle\caches\8.13\transforms\2f1928a60f429916f633a92bc6de48e3\transformed\emoji2-1.2.0\res
+net.ace.PixivNovelDownloader.app-recyclerview-1.3.0-9 C:\Users\ace20\.gradle\caches\8.13\transforms\32ba7a95c9a2b73060b07215c0ea2e77\transformed\recyclerview-1.3.0\res
+net.ace.PixivNovelDownloader.app-lifecycle-viewmodel-savedstate-2.6.1-10 C:\Users\ace20\.gradle\caches\8.13\transforms\37a22cecb9d2b5b75e522beb54bd3005\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+net.ace.PixivNovelDownloader.app-savedstate-1.2.1-11 C:\Users\ace20\.gradle\caches\8.13\transforms\3aafe3796118fddacbb4d1c9b487bbc5\transformed\savedstate-1.2.1\res
+net.ace.PixivNovelDownloader.app-activity-1.8.0-12 C:\Users\ace20\.gradle\caches\8.13\transforms\53fbf2b234baa63dac39ee4b94a63566\transformed\activity-1.8.0\res
+net.ace.PixivNovelDownloader.app-lifecycle-livedata-core-2.6.1-13 C:\Users\ace20\.gradle\caches\8.13\transforms\55da1a8bcaacc7145cc6ad71c59bd145\transformed\lifecycle-livedata-core-2.6.1\res
+net.ace.PixivNovelDownloader.app-lifecycle-viewmodel-2.6.1-14 C:\Users\ace20\.gradle\caches\8.13\transforms\58866181992f11ff4bbf20cf235ba35e\transformed\lifecycle-viewmodel-2.6.1\res
+net.ace.PixivNovelDownloader.app-savedstate-ktx-1.2.1-15 C:\Users\ace20\.gradle\caches\8.13\transforms\5ce68d12079b118be3d24708becf6047\transformed\savedstate-ktx-1.2.1\res
+net.ace.PixivNovelDownloader.app-lifecycle-livedata-core-ktx-2.6.1-16 C:\Users\ace20\.gradle\caches\8.13\transforms\5ed708032454f868d38aab3c023a705c\transformed\lifecycle-livedata-core-ktx-2.6.1\res
+net.ace.PixivNovelDownloader.app-window-1.0.0-17 C:\Users\ace20\.gradle\caches\8.13\transforms\6163c254997c617733270024524adbca\transformed\window-1.0.0\res
+net.ace.PixivNovelDownloader.app-appcompat-resources-1.6.1-18 C:\Users\ace20\.gradle\caches\8.13\transforms\7a9cd0b34df2a4310754dc23e7fe00a1\transformed\appcompat-resources-1.6.1\res
+net.ace.PixivNovelDownloader.app-core-ktx-1.12.0-19 C:\Users\ace20\.gradle\caches\8.13\transforms\82b91d3a6c423fcc6301386992cd1cb5\transformed\core-ktx-1.12.0\res
+net.ace.PixivNovelDownloader.app-lifecycle-viewmodel-ktx-2.6.1-20 C:\Users\ace20\.gradle\caches\8.13\transforms\898453360b96c70caae23bd71f1c24c3\transformed\lifecycle-viewmodel-ktx-2.6.1\res
+net.ace.PixivNovelDownloader.app-preference-1.2.0-21 C:\Users\ace20\.gradle\caches\8.13\transforms\8ab70fabd1091a3d3c144be67d4af6e3\transformed\preference-1.2.0\res
+net.ace.PixivNovelDownloader.app-emoji2-views-helper-1.2.0-22 C:\Users\ace20\.gradle\caches\8.13\transforms\8d026030eef479b3035f38fb437e39df\transformed\emoji2-views-helper-1.2.0\res
+net.ace.PixivNovelDownloader.app-viewpager2-1.0.0-23 C:\Users\ace20\.gradle\caches\8.13\transforms\a11e90e2759bb1ee8dcd205a75f71b8a\transformed\viewpager2-1.0.0\res
+net.ace.PixivNovelDownloader.app-coordinatorlayout-1.1.0-24 C:\Users\ace20\.gradle\caches\8.13\transforms\a9470de8686d5dc3f24730b3818e2ccb\transformed\coordinatorlayout-1.1.0\res
+net.ace.PixivNovelDownloader.app-annotation-experimental-1.3.0-25 C:\Users\ace20\.gradle\caches\8.13\transforms\ae580d1f5e2fcc382a4b4975d37a209e\transformed\annotation-experimental-1.3.0\res
+net.ace.PixivNovelDownloader.app-core-1.12.0-26 C:\Users\ace20\.gradle\caches\8.13\transforms\b9771f91523b75ad729935354709480c\transformed\core-1.12.0\res
+net.ace.PixivNovelDownloader.app-lifecycle-livedata-2.6.1-27 C:\Users\ace20\.gradle\caches\8.13\transforms\beb36bfb5458c6f0e9238fc9d0a33a54\transformed\lifecycle-livedata-2.6.1\res
+net.ace.PixivNovelDownloader.app-appcompat-1.6.1-28 C:\Users\ace20\.gradle\caches\8.13\transforms\c3e721aaab5164c08dfcf6e2cf7aeb97\transformed\appcompat-1.6.1\res
+net.ace.PixivNovelDownloader.app-lifecycle-runtime-ktx-2.6.1-29 C:\Users\ace20\.gradle\caches\8.13\transforms\c7105a313fc45d44a799da6ac90e06da\transformed\lifecycle-runtime-ktx-2.6.1\res
+net.ace.PixivNovelDownloader.app-constraintlayout-2.1.4-30 C:\Users\ace20\.gradle\caches\8.13\transforms\c76642746b34b26b3d34fd17be4925a0\transformed\constraintlayout-2.1.4\res
+net.ace.PixivNovelDownloader.app-profileinstaller-1.3.0-31 C:\Users\ace20\.gradle\caches\8.13\transforms\c7c12291dd662d3f6bd05cb5bbb13884\transformed\profileinstaller-1.3.0\res
+net.ace.PixivNovelDownloader.app-customview-poolingcontainer-1.0.0-32 C:\Users\ace20\.gradle\caches\8.13\transforms\db50e37f4099fc8359e8982db8df6324\transformed\customview-poolingcontainer-1.0.0\res
+net.ace.PixivNovelDownloader.app-activity-ktx-1.8.0-33 C:\Users\ace20\.gradle\caches\8.13\transforms\e50a8d995d4f3ca260b70148b00ba2ca\transformed\activity-ktx-1.8.0\res
+net.ace.PixivNovelDownloader.app-cardview-1.0.0-34 C:\Users\ace20\.gradle\caches\8.13\transforms\e5dcb1b37d437da8166a34233d2076b8\transformed\cardview-1.0.0\res
+net.ace.PixivNovelDownloader.app-startup-runtime-1.1.1-35 C:\Users\ace20\.gradle\caches\8.13\transforms\fd144c99a449385e0a30766430e790c4\transformed\startup-runtime-1.1.1\res
+net.ace.PixivNovelDownloader.app-pngs-36 D:\My project\android pojact\app\build\generated\res\pngs\debug
+net.ace.PixivNovelDownloader.app-resValues-37 D:\My project\android pojact\app\build\generated\res\resValues\debug
+net.ace.PixivNovelDownloader.app-packageDebugResources-38 D:\My project\android pojact\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+net.ace.PixivNovelDownloader.app-packageDebugResources-39 D:\My project\android pojact\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+net.ace.PixivNovelDownloader.app-debug-40 D:\My project\android pojact\app\build\intermediates\merged_res\debug\mergeDebugResources
+net.ace.PixivNovelDownloader.app-debug-41 D:\My project\android pojact\app\src\debug\res
+net.ace.PixivNovelDownloader.app-main-42 D:\My project\android pojact\app\src\main\res

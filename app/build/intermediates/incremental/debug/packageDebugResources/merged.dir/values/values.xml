@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_format_entries">
+        <item>@string/format_txt</item>
+        <item>@string/format_html</item>
+        <item>@string/format_md</item>
+    </string-array>
+    <string-array name="file_format_values">
+        <item>TXT</item>
+        <item>HTML</item>
+        <item>Markdown</item>
+    </string-array>
+    <string-array name="language_entries">
+        <item>简体中文</item>
+        <item>English</item>
+        <item>日本語</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>zh</item>
+        <item>en</item>
+        <item>ja</item>
+    </string-array>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="ic_launcher_background">#0095F8</color>
+    <color name="white">#FFFFFF</color>
+    <item name="menu_history" type="id"/>
+    <item name="menu_home" type="id"/>
+    <item name="menu_progress" type="id"/>
+    <string name="app_name">Pixiv小说下载器</string>
+    <string name="download">下载</string>
+    <string name="download_failed">下载失败</string>
+    <string name="download_success">下载成功</string>
+    <string name="file_format">文件格式</string>
+    <string name="format_html" translatable="false">HTML</string>
+    <string name="format_md" translatable="false">md</string>
+    <string name="format_txt" translatable="false">TXT</string>
+    <string name="history_title">下载历史</string>
+    <string name="input_hint">输入Pixiv小说ID或链接</string>
+    <string name="invalid_id">无效的ID</string>
+    <string name="lang_en">English</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_zh">简体中文</string>
+    <string name="language">语言</string>
+    <string name="language_setting">语言</string>
+    <string name="menu_history">历史</string>
+    <string name="menu_home">主页</string>
+    <string name="menu_progress">进度</string>
+    <string name="open_folder">打开文件夹</string>
+    <string name="progress_waiting">等待任务</string>
+    <string name="save_path">保存路径</string>
+    <string name="theme_dark">深色主题</string>
+    <string name="theme_light">浅色主题</string>
+    <string name="theme_switch">夜间模式</string>
+</resources>
