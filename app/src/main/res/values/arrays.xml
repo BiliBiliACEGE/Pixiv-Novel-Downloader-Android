@@ -1,0 +1,25 @@
+<resources>
+    <string-array name="file_format_entries">
+        <item>@string/format_txt</item>
+        <item>@string/format_html</item>
+        <item>@string/format_md</item>
+    </string-array>
+    <string-array name="file_format_values">
+        <item>TXT</item>
+        <item>HTML</item>
+        <item>Markdown</item>
+    </string-array>
+    <string-array name="language_entries">
+        <item>简体中文</item>
+        <item>English</item>
+        <item>日本語</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>zh</item>
+        <item>en</item>
+        <item>ja</item>
+    </string-array>
+    <string name="format_txt" translatable="false">TXT</string>
+    <string name="format_html" translatable="false">HTML</string>
+    <string name="format_md" translatable="false">md</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Pixiv小説ダウンローダー</string>
+    <string name="menu_home">ホーム</string>
+    <string name="menu_progress">進捗</string>
+    <string name="menu_history">履歴</string>
+    <string name="input_hint">Pixiv小説IDまたはリンクを入力</string>
+    <string name="download">ダウンロード</string>
+    <string name="invalid_id">無効なID</string>
+    <string name="download_success">ダウンロード成功</string>
+    <string name="download_failed">ダウンロード失敗</string>
+    <string name="history_title">ダウンロード履歴</string>
+    <string name="progress_waiting">タスク待ち</string>
+    <string name="language_setting">言語</string>
+    <string name="lang_zh">簡体字中国語</string>
+    <string name="lang_en">英語</string>
+    <string name="lang_ja">日本語</string>
+    <string name="save_path">保存パス</string>
+    <string name="file_format">ファイル形式</string>
+    <string name="open_folder">フォルダーを開く</string>
+    <string name="language">言語</string>
+    <string name="theme_light">ライトテーマ</string>
+    <string name="theme_dark">ダークテーマ</string>
+    <string name="theme_switch">ナイトモード</string>
+</resources>
