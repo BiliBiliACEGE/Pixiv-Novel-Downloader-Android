@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setElevation(8f);
         bottomNav.setOutlineProvider(null);
 
-        // 设置ViewPager适配器
+        // 修复：确保Fragment构造函数无参，且包名一致
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(new HomeFragment());
-        fragments.add(new ProgressFragment());
-        fragments.add(new HistoryFragment());
+        fragments.add(new net.ace.PixivNovelDownloader.HomeFragment());
+        fragments.add(new net.ace.PixivNovelDownloader.ProgressFragment());
+        fragments.add(new net.ace.PixivNovelDownloader.HistoryFragment());
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this, fragments);
         viewPager.setAdapter(adapter);
