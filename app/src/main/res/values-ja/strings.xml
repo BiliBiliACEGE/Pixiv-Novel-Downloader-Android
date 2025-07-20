@@ -23,4 +23,15 @@
     <string name="theme_switch">ナイトモード</string>
     <string name="save_apply">保存して適用する</string>
     <string name="settings_saved">設定が保存されました</string>
+    <string name="no_items_selected">何も選択されていません</string>
+    <string name="no_history">ダウンロード履歴はありません</string>
+    <string name="confirm_delete">削除を確認</string>
+    <string name="confirm_delete_history">%s の履歴を削除してもよろしいですか</string>
+    <string name="confirm_clear_all_history">すべての履歴をクリアしてもよろしいですか？</string>
+    <string name="delete">削除</string>
+    <string name="cancel">取り消し</string>
+    <string name="clear_all">すべてを消去する</string>
+    <string name="delete_selected">選択したものを削除</string>
+    <string name="all_history">すべての履歴</string>
+    <string name="selected_count">選択された: %d</string>
 </resources>

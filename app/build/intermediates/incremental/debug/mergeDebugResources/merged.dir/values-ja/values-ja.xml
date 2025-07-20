@@ -31,6 +31,7 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"共有"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>と共有"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"折りたたむ"</string>
+    <string name="all_history">すべての履歴</string>
     <string name="app_name">Pixiv小説ダウンローダー</string>
     <string name="app_settings">設定</string>
     <string name="bottomsheet_action_collapse">ボトムシートを閉じる</string>
@@ -45,10 +46,17 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"着信"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"通話中"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"着信をスクリーニング中"</string>
+    <string name="cancel">取り消し</string>
     <string name="character_counter_content_description">入力済み文字数: %1$d/%2$d</string>
     <string name="character_counter_overflowed_content_description">文字数制限を超えています（%1$d/%2$d 文字）</string>
+    <string name="clear_all">すべてを消去する</string>
     <string name="clear_text_end_icon_content_description">テキストを消去</string>
+    <string name="confirm_clear_all_history">すべての履歴をクリアしてもよろしいですか？</string>
+    <string name="confirm_delete">削除を確認</string>
+    <string name="confirm_delete_history">%s の履歴を削除してもよろしいですか</string>
     <string msgid="6083905920877235314" name="copy">"コピー"</string>
+    <string name="delete">削除</string>
+    <string name="delete_selected">選択したものを削除</string>
     <string name="download">ダウンロード</string>
     <string name="download_failed">ダウンロード失敗</string>
     <string name="download_success">ダウンロード成功</string>
@@ -123,6 +131,8 @@
     <string name="mtrl_picker_toggle_to_year_selection">タップすると年表示に切り替わります</string>
     <string name="mtrl_timepicker_cancel">キャンセル</string>
     <string name="mtrl_timepicker_confirm">OK</string>
+    <string name="no_history">ダウンロード履歴はありません</string>
+    <string name="no_items_selected">何も選択されていません</string>
     <string msgid="6573031135582639649" name="not_set">"未設定"</string>
     <string name="open_folder">フォルダーを開く</string>
     <string name="password_toggle_content_description">パスワードを表示</string>
@@ -131,6 +141,7 @@
     <string name="save_apply">保存して適用する</string>
     <string name="save_path">保存パス</string>
     <string msgid="6264217191555673260" name="search_menu_title">"検索"</string>
+    <string name="selected_count">選択された: %d</string>
     <string name="settings_saved">設定が保存されました</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>、<ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>

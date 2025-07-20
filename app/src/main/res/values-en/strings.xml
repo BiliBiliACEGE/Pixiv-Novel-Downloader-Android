@@ -23,4 +23,15 @@
     <string name="theme_switch">Night mode</string>
     <string name="save_apply">Save and apply</string>
     <string name="settings_saved">The settings are saved</string>
+    <string name="no_items_selected">No items are selected</string>
+    <string name="no_history">No download history</string>
+    <string name="confirm_delete">Confirm the deletion</string>
+    <string name="confirm_delete_history">Determined that you want to delete %s history?</string>
+    <string name="confirm_clear_all_history">Are you sure you want to clear all your history?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_all">Empty it all</string>
+    <string name="delete_selected">Delete the selection</string>
+    <string name="all_history">Full history</string>
+    <string name="selected_count">Selected: %d</string>
 </resources>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_history">Full history</string>
     <string name="app_name">Pixiv Novel Downloader</string>
     <string name="app_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_all">Empty it all</string>
+    <string name="confirm_clear_all_history">Are you sure you want to clear all your history?</string>
+    <string name="confirm_delete">Confirm the deletion</string>
+    <string name="confirm_delete_history">Determined that you want to delete %s history?</string>
+    <string name="delete">Delete</string>
+    <string name="delete_selected">Delete the selection</string>
     <string name="download">Download</string>
     <string name="download_failed">Download Failed</string>
     <string name="download_success">Download Success</string>
@@ -16,10 +24,14 @@
     <string name="menu_history">History</string>
     <string name="menu_home">Home</string>
     <string name="menu_progress">Progress</string>
+    <string name="no_history">No download history</string>
+    <string name="no_items_selected">No items are selected</string>
     <string name="open_folder">open folder</string>
     <string name="progress_waiting">Waiting for task</string>
     <string name="save_apply">Save and apply</string>
     <string name="save_path">save path</string>
+    <string name="selected_count">Selected: %d</string>
+    <string name="settings_saved">The settings are saved</string>
     <string name="theme_dark">Dark theme</string>
     <string name="theme_light">Light theme</string>
     <string name="theme_switch">Night mode</string>

@@ -3239,6 +3239,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnClearHistory
 id btnDownload
 id btnSave
 id btnSettings
@@ -3917,6 +3918,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string all_history
 string androidx_startup
 string app_name
 string app_settings
@@ -3934,11 +3936,18 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string cancel
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string clear_all
 string clear_text_end_icon_content_description
+string confirm_clear_all_history
+string confirm_delete
+string confirm_delete_history
 string copy
+string delete
+string delete_selected
 string download
 string download_failed
 string download_success
@@ -4065,6 +4074,8 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string no_history
+string no_items_selected
 string not_set
 string open_folder
 string password_toggle_content_description
@@ -4080,6 +4091,7 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string selected_count
 string settings_saved
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior

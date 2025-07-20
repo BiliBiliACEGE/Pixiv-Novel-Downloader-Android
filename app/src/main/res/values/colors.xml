@@ -1,4 +1,6 @@
 <resources>
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="white">#FFFFFF</color>
+    <color name="progress_color">#4CAF50</color>
+    <color name="progress_background_color">#C5E1A5</color>
 </resources>

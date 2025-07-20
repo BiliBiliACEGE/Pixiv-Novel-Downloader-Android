@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_history">すべての履歴</string>
     <string name="app_name">Pixiv小説ダウンローダー</string>
     <string name="app_settings">設定</string>
+    <string name="cancel">取り消し</string>
+    <string name="clear_all">すべてを消去する</string>
+    <string name="confirm_clear_all_history">すべての履歴をクリアしてもよろしいですか？</string>
+    <string name="confirm_delete">削除を確認</string>
+    <string name="confirm_delete_history">%s の履歴を削除してもよろしいですか</string>
+    <string name="delete">削除</string>
+    <string name="delete_selected">選択したものを削除</string>
     <string name="download">ダウンロード</string>
     <string name="download_failed">ダウンロード失敗</string>
     <string name="download_success">ダウンロード成功</string>
@@ -16,10 +24,13 @@
     <string name="menu_history">履歴</string>
     <string name="menu_home">ホーム</string>
     <string name="menu_progress">進捗</string>
+    <string name="no_history">ダウンロード履歴はありません</string>
+    <string name="no_items_selected">何も選択されていません</string>
     <string name="open_folder">フォルダーを開く</string>
     <string name="progress_waiting">タスク待ち</string>
     <string name="save_apply">保存して適用する</string>
     <string name="save_path">保存パス</string>
+    <string name="selected_count">選択された: %d</string>
     <string name="settings_saved">設定が保存されました</string>
     <string name="theme_dark">ダークテーマ</string>
     <string name="theme_light">ライトテーマ</string>
