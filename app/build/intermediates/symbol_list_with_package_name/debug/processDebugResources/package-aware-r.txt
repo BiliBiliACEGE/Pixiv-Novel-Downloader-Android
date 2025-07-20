@@ -3324,6 +3324,7 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id etInput
+id etSavePath
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3918,6 +3919,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
+string app_settings
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
@@ -3960,7 +3962,6 @@ string lang_en
 string lang_ja
 string lang_zh
 string language
-string language_setting
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4073,11 +4074,13 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string preference_copied
 string progress_waiting
+string save_apply
 string save_path
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string settings_saved
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow

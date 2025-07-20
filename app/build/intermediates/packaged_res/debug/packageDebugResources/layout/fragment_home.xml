@@ -29,7 +29,7 @@
         android:id="@+id/btnSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/language_setting"
+        android:text="@string/app_settings"
         android:backgroundTint="@color/white"
         android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/button_outline"

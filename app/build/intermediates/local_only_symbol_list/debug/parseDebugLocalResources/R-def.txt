@@ -17,6 +17,7 @@ id btnDownload
 id btnSave
 id btnSettings
 id etInput
+id etSavePath
 id menu_history
 id menu_home
 id menu_progress
@@ -38,6 +39,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string app_name
+string app_settings
 string download
 string download_failed
 string download_success
@@ -52,13 +54,14 @@ string lang_en
 string lang_ja
 string lang_zh
 string language
-string language_setting
 string menu_history
 string menu_home
 string menu_progress
 string open_folder
 string progress_waiting
+string save_apply
 string save_path
+string settings_saved
 string theme_dark
 string theme_light
 string theme_switch

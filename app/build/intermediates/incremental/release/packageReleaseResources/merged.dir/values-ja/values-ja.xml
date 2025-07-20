@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Pixiv小説ダウンローダー</string>
+    <string name="app_settings">設定</string>
     <string name="download">ダウンロード</string>
     <string name="download_failed">ダウンロード失敗</string>
     <string name="download_success">ダウンロード成功</string>
@@ -12,12 +13,12 @@
     <string name="lang_ja">日本語</string>
     <string name="lang_zh">簡体字中国語</string>
     <string name="language">言語</string>
-    <string name="language_setting">言語</string>
     <string name="menu_history">履歴</string>
     <string name="menu_home">ホーム</string>
     <string name="menu_progress">進捗</string>
     <string name="open_folder">フォルダーを開く</string>
     <string name="progress_waiting">タスク待ち</string>
+    <string name="save_apply">保存して適用する</string>
     <string name="save_path">保存パス</string>
     <string name="theme_dark">ダークテーマ</string>
     <string name="theme_light">ライトテーマ</string>

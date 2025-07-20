@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/language_setting"
+        android:text="@string/language"
         android:textSize="18sp"
         android:textColor="@color/colorPrimaryDark"
         android:layout_marginBottom="16dp"/>
@@ -36,11 +36,18 @@
         android:layout_marginBottom="24dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
+    <EditText
+        android:id="@+id/etSavePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/save_path"
+        android:layout_marginBottom="24dp"/>
+
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@android:string/ok"
+        android:text="@string/save_apply"
         android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="@android:color/white"/>
 </LinearLayout>
