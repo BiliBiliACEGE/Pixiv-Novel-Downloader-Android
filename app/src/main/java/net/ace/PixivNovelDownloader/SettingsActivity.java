@@ -1,13 +1,18 @@
 package net.ace.PixivNovelDownloader;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -15,33 +20,50 @@ import android.widget.TextView;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import androidx.documentfile.provider.DocumentFile;
+
 import java.io.File;
 
 public class SettingsActivity extends AppCompatActivity {
+    private static final int REQUEST_CODE_CHOOSE_DIR = 1001;
+
     private EditText etSavePath;
     private SharedPreferences prefs;
+    private ImageView btnBack;
+    private Button btnChoosePath;
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        SharedPreferences prefs = newBase.getSharedPreferences("settings", MODE_PRIVATE);
+        String lang = prefs.getString("language", "zh");
+        super.attachBaseContext(LocaleHelper.setLocale(newBase, lang));
+    }
+
+    @SuppressLint("WrongViewCast")
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // 在设置内容视图前应用主题
         prefs = getSharedPreferences("settings", MODE_PRIVATE);
         applyTheme(prefs);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        // 初始化UI组件
         Spinner spinner = findViewById(R.id.spinnerLanguage);
         Button btnSave = findViewById(R.id.btnSave);
+        btnBack = findViewById(R.id.btnBack);
         @SuppressLint("UseSwitchCompatOrMaterialCode") Switch switchTheme = findViewById(R.id.switchTheme);
         TextView tvTheme = findViewById(R.id.tvTheme);
         etSavePath = findViewById(R.id.etSavePath);
+        btnChoosePath = findViewById(R.id.btnChoosePath);
 
-        // 防止空指针异常
-        if (spinner == null || btnSave == null || switchTheme == null || tvTheme == null || etSavePath == null) {
+        if (spinner == null || btnSave == null || switchTheme == null ||
+                tvTheme == null || etSavePath == null || btnBack == null || btnChoosePath == null) {
             finish();
             return;
         }
+
+        btnBack.setOnClickListener(v -> finish());
+        btnChoosePath.setOnClickListener(v -> openDirectoryChooser());
 
         // 语言选择器设置
         String[] langs = {"简体中文", "English", "日本語"};
@@ -56,28 +78,22 @@ public class SettingsActivity extends AppCompatActivity {
         else if ("ja".equals(lang)) idx = 2;
         spinner.setSelection(idx);
 
-        // =============== 路径显示逻辑 ===============
-        // 获取默认路径
-        String defaultPath = getDefaultSavePath();
-
-        // 获取保存的路径（如果没有保存过，则使用默认路径）
+        // =============== 修复的路径显示逻辑 ===============
         String savedPath = prefs.getString("save_path", "");
 
-        // 如果保存的路径为空或者是默认路径的占位符，则显示默认路径
-        if (TextUtils.isEmpty(savedPath)) {
-            etSavePath.setText(defaultPath);
-        } else {
-            etSavePath.setText(savedPath);
+        // 修复旧版本路径不一致问题
+        if (TextUtils.isEmpty(savedPath) || savedPath.contains("PixivNovels")) {
+            savedPath = getDefaultSavePath();
+            // 更新存储的路径
+            prefs.edit().putString("save_path", savedPath).apply();
         }
+        etSavePath.setText(savedPath);
 
         // =============== 主题控制逻辑 ===============
-
-        // 主题开关设置
         boolean isDark = prefs.getBoolean("dark_theme", false);
         switchTheme.setChecked(isDark);
         updateThemeText(tvTheme, isDark);
 
-        // 主题切换监听器
         switchTheme.setOnCheckedChangeListener((buttonView, checked) -> {
             prefs.edit().putBoolean("dark_theme", checked).apply();
             updateThemeText(tvTheme, checked);
@@ -91,10 +107,11 @@ public class SettingsActivity extends AppCompatActivity {
             String selectedLang = values[sel];
             String inputPath = etSavePath.getText().toString().trim();
 
-            // 如果用户清除了输入框，恢复为默认路径
-            if (TextUtils.isEmpty(inputPath)) {
+            // 验证路径有效性
+            if (!isPathValid(inputPath)) {
+                Toast.makeText(this, R.string.invalid_path_message, Toast.LENGTH_LONG).show();
                 inputPath = getDefaultSavePath();
-                etSavePath.setText(inputPath); // 更新UI显示
+                etSavePath.setText(inputPath);
             }
 
             prefs.edit()
@@ -108,6 +125,55 @@ public class SettingsActivity extends AppCompatActivity {
 
             restartMainActivity();
         });
+    }
+
+    // =============== 路径选择方法 ===============
+    private void openDirectoryChooser() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION |
+                Intent.FLAG_GRANT_WRITE_URI_PERMISSION |
+                Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
+        startActivityForResult(intent, REQUEST_CODE_CHOOSE_DIR);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_CHOOSE_DIR && resultCode == RESULT_OK) {
+            if (data != null) {
+                Uri treeUri = data.getData();
+                if (treeUri != null) {
+                    getContentResolver().takePersistableUriPermission(
+                            treeUri,
+                            Intent.FLAG_GRANT_READ_URI_PERMISSION |
+                                    Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                    );
+
+                    DocumentFile docFile = DocumentFile.fromTreeUri(this, treeUri);
+                    if (docFile != null && docFile.exists()) {
+                        String path = docFile.getUri().getPath();
+                        if (path != null && path.startsWith("/tree/")) {
+                            path = path.replace("/tree/", "");
+                        }
+                        etSavePath.setText(path);
+                    }
+                }
+            }
+        }
+    }
+
+    // =============== 路径验证方法 ===============
+    private boolean isPathValid(String path) {
+        if (TextUtils.isEmpty(path)) {
+            return false;
+        }
+
+        try {
+            File dir = new File(path);
+            return dir.exists() ? dir.isDirectory() && dir.canWrite() : dir.mkdirs();
+        } catch (SecurityException e) {
+            return false;
+        }
     }
 
     /**
@@ -124,15 +190,22 @@ public class SettingsActivity extends AppCompatActivity {
      * 更新主题文本显示
      */
     private void updateThemeText(TextView tvTheme, boolean isDark) {
-        tvTheme.setText(isDark ? getString(R.string.theme_dark) : getString(R.string.theme_light));
+        tvTheme.setText(isDark ? getString(R.string.theme_dark) : getString(R.string.themes));
     }
 
     /**
-     * 获取默认保存路径
+     * 获取正确的默认保存路径（与实际下载路径一致）
      */
     private String getDefaultSavePath() {
-        // 创建默认目录（如果不存在）
-        File defaultDir = getExternalFilesDir("Novels");
+        // 使用与下载器相同的路径
+        File defaultDir = new File(getExternalFilesDir(null), "PixivDownloads");
+
+        // 处理可能的null情况
+        if (defaultDir == null) {
+            defaultDir = new File(Environment.getExternalStorageDirectory(),
+                    "Android/data/net.ace.PixivNovelDownloader/files/PixivDownloads");
+        }
+
         if (!defaultDir.exists()) {
             defaultDir.mkdirs();
         }

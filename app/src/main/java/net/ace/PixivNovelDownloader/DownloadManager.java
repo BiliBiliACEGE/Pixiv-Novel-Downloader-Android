@@ -76,7 +76,7 @@ public class DownloadManager {
     }
 
     public void downloadSingleNovel(Context ctx, String novelId, String saveDir, String format, DownloadCallback cb) {
-        mainHandler.post(() -> cb.onProgress(0, "获取小说信息..."));
+        mainHandler.post(() -> cb.onProgress(0, String.valueOf(R.string.progress_fetching_novel)));
         String url = "https://www.pixiv.net/ajax/novel/" + novelId;
         Request req = new Request.Builder()
                 .url(url)
@@ -85,18 +85,17 @@ public class DownloadManager {
                 .build();
         client.newCall(req).enqueue(new Callback() {
             @Override public void onFailure(Call call, IOException e) {
-                mainHandler.post(() -> cb.onError("网络错误: " + e.getMessage()));
+                mainHandler.post(() -> cb.onError(e.getMessage()));
             }
             @Override public void onResponse(Call call, Response response) {
                 try {
                     String body = response.body().string();
                     JSONObject obj = new JSONObject(body);
                     if (obj.optBoolean("error")) {
-                        mainHandler.post(() -> cb.onError("Pixiv接口错误"));
                         return;
                     }
                     JSONObject novel = obj.getJSONObject("body");
-                    String title = novel.optString("title", "未命名小说");
+                    String title = novel.optString("title", String.valueOf(R.string.default_untitled_novel));
                     String content = novel.optString("content", "");
                     String ext = "txt";
                     String fileContent = content;
@@ -115,18 +114,18 @@ public class DownloadManager {
                         fos.write(fileContent.getBytes("UTF-8"));
                     }
                     mainHandler.post(() -> {
-                        cb.onProgress(100, "下载完成");
+                        cb.onProgress(100, String.valueOf(R.string.progress_download_complete));
                         cb.onSuccess(title, file.getAbsolutePath());
                     });
                 } catch (Exception e) {
-                    mainHandler.post(() -> cb.onError("解析失败: " + e.getMessage()));
+                    mainHandler.post(() -> cb.onError(R.string.error_parse_failed + e.getMessage()));
                 }
             }
         });
     }
 
     public void downloadSeries(String seriesId, String saveDir, String format, DownloadCallback cb) {
-        mainHandler.post(() -> cb.onProgress(0, "获取系列信息..."));
+        mainHandler.post(() -> cb.onProgress(0, String.valueOf(R.string.progress_fetching_series)));
         String url = "https://www.pixiv.net/ajax/novel/series/" + seriesId;
         Request req = new Request.Builder()
                 .url(url)
@@ -135,18 +134,18 @@ public class DownloadManager {
                 .build();
         client.newCall(req).enqueue(new Callback() {
             @Override public void onFailure(Call call, IOException e) {
-                mainHandler.post(() -> cb.onError("网络错误: " + e.getMessage()));
+                mainHandler.post(() -> cb.onError(R.string.error_network + e.getMessage()));
             }
             @Override public void onResponse(Call call, Response response) {
                 try {
                     String body = response.body().string();
                     JSONObject obj = new JSONObject(body);
                     if (obj.optBoolean("error")) {
-                        mainHandler.post(() -> cb.onError("Pixiv接口错误"));
+                        mainHandler.post(() -> cb.onError(String.valueOf(R.string.error_pixiv_api)));
                         return;
                     }
                     JSONObject series = obj.getJSONObject("body");
-                    String seriesTitle = series.optString("title", "未命名系列");
+                    String seriesTitle = series.optString("title", String.valueOf(R.string.default_untitled_series));
                     // 获取小说ID列表
                     List<String> novelIds = new ArrayList<>();
                     if (series.has("seriesContents")) {
@@ -160,7 +159,7 @@ public class DownloadManager {
                         }
                     }
                     if (novelIds.isEmpty()) {
-                        mainHandler.post(() -> cb.onError("系列中没有小说"));
+                        mainHandler.post(() -> cb.onError(String.valueOf(R.string.error_empty_series)));
                         return;
                     }
                     // 创建系列目录
@@ -176,7 +175,7 @@ public class DownloadManager {
                             @Override
                             public void onProgress(int percent, String info) {
                                 int progress = (int) (((idx + percent / 100.0) / total) * 100);
-                                mainHandler.post(() -> cb.onProgress(progress, "系列下载: " + (idx + 1) + "/" + total));
+                                mainHandler.post(() -> cb.onProgress(progress, R.string.progress_series_download + (idx + 1) + "/" + total));
                             }
                             @Override
                             public void onSuccess(String title, String filePath) {
@@ -192,7 +191,7 @@ public class DownloadManager {
                         });
                     }
                 } catch (Exception e) {
-                    mainHandler.post(() -> cb.onError("解析失败: " + e.getMessage()));
+                    mainHandler.post(() -> cb.onError(R.string.error_parse_failed + e.getMessage()));
                 }
             }
         });
@@ -200,7 +199,7 @@ public class DownloadManager {
 
     public void batchDownload(List<String> inputs, String saveDir, String format, DownloadCallback cb) {
         if (inputs == null || inputs.isEmpty()) {
-            mainHandler.post(() -> cb.onError("批量下载输入为空"));
+            mainHandler.post(() -> cb.onError(String.valueOf(R.string.error_empty_batch)));
             return;
         }
         int total = inputs.size();
@@ -211,7 +210,7 @@ public class DownloadManager {
             String input = inputs.get(i);
             ContentIdResult result = extractContentId(input);
             if (result == null) {
-                mainHandler.post(() -> cb.onProgress((int) ((idx + 1) * 100.0 / total), "无效输入: " + input));
+                mainHandler.post(() -> cb.onProgress((int) ((idx + 1) * 100.0 / total), R.string.error_invalid_input + input));
                 finished[0]++;
                 continue;
             }
@@ -219,21 +218,21 @@ public class DownloadManager {
                 @Override
                 public void onProgress(int percent, String info) {
                     int progress = (int) (((idx + percent / 100.0) / total) * 100);
-                    mainHandler.post(() -> cb.onProgress(progress, "批量下载: " + (idx + 1) + "/" + total));
+                    mainHandler.post(() -> cb.onProgress(progress, R.string.progress_batch_download + (idx + 1) + "/" + total));
                 }
                 @Override
                 public void onSuccess(String title, String filePath) {
                     success[0]++;
                     finished[0]++;
                     if (finished[0] == total) {
-                        mainHandler.post(() -> cb.onSuccess("批量下载完成", "成功: " + success[0] + "/" + total));
+                        mainHandler.post(() -> cb.onSuccess(String.valueOf(R.string.progress_batch_complete), R.string.progress_batch_success + success[0] + "/" + total));
                     }
                 }
                 @Override
                 public void onError(String errorMsg) {
                     finished[0]++;
                     if (finished[0] == total) {
-                        mainHandler.post(() -> cb.onSuccess("批量下载完成", "成功: " + success[0] + "/" + total));
+                        mainHandler.post(() -> cb.onSuccess(String.valueOf(R.string.progress_batch_complete), R.string.progress_batch_success + success[0] + "/" + total));
                     }
                 }
             };

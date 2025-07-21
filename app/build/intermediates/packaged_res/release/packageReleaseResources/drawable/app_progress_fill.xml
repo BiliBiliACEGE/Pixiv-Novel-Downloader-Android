@@ -3,7 +3,7 @@
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
             <corners android:radius="8dp" />
-            <solid android:color="#E0E0E0" /> <!-- Same as background or transparent -->
+            <solid android:color="#E0E0E0" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
@@ -15,7 +15,6 @@
                     android:centerColor="#8BC34A"
                     android:endColor="#CDDC39"
                     android:angle="0" />
-                <!-- Or a solid color: <solid android:color="#4CAF50" /> -->
             </shape>
         </clip>
     </item>

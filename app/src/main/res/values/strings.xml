@@ -18,7 +18,7 @@
     <string name="file_format">文件格式</string>
     <string name="open_folder">打开文件夹</string>
     <string name="language">语言</string>
-    <string name="theme_light">浅色主题</string>
+    <string name="themes">主题</string>
     <string name="theme_dark">深色主题</string>
     <string name="theme_switch">夜间模式</string>
     <string name="save_apply">保存并应用</string>
@@ -34,4 +34,23 @@
     <string name="clear_all">清空全部</string>
     <string name="delete_selected">删除所选</string>
     <string name="all_history">全部历史记录</string>
+    <string name="choose_path">选择保存路径</string>
+    <string name="invalid_path_message">路径无效或不可写，已恢复默认路径</string>
+    <string name="default_save_path">默认保存路径</string>
+    <string name="app_description">使用说明\n 1. 输入Pixiv小说ID或链接\n 2. 在设置中选择下载格式并保存\n 3. 点击下载按钮</string>
+    <string name="error_network">网络错误: %s</string>
+    <string name="error_parse_failed">解析失败: %s</string>
+    <string name="error_pixiv_api">Pixiv接口错误</string>
+    <string name="error_empty_series">系列中没有小说</string>
+    <string name="error_empty_batch">批量下载输入为空</string>
+    <string name="error_invalid_input">无效输入: %s</string>
+    <string name="progress_fetching_novel">获取小说信息…</string>
+    <string name="progress_fetching_series">获取系列信息…</string>
+    <string name="progress_download_complete">下载完成</string>
+    <string name="progress_series_download">系列下载: %d/%d</string>
+    <string name="progress_batch_download">批量下载: %d/%d</string>
+    <string name="progress_batch_complete">批量下载完成</string>
+    <string name="progress_batch_success">成功: %d/%d</string>
+    <string name="default_untitled_novel">未命名小说</string>
+    <string name="default_untitled_series">未命名系列</string>
 </resources>

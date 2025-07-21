@@ -18,7 +18,7 @@
     <string name="file_format">ファイル形式</string>
     <string name="open_folder">フォルダーを開く</string>
     <string name="language">言語</string>
-    <string name="theme_light">ライトテーマ</string>
+    <string name="themes">ライトテーマ</string>
     <string name="theme_dark">ダークテーマ</string>
     <string name="theme_switch">ナイトモード</string>
     <string name="save_apply">保存して適用する</string>
@@ -34,4 +34,23 @@
     <string name="delete_selected">選択したものを削除</string>
     <string name="all_history">すべての履歴</string>
     <string name="selected_count">選択された: %d</string>
+    <string name="default_save_path">デフォルト保存先</string>
+    <string name="app_description">使用手順\n 1. Pixiv小説のIDまたはリンクを入力します\n 2. 設定でダウンロード形式を選択し、保存します\n 3. ダウンロードボタンをクリックします</string>
+    <string name="choose_path">保存先を選択する</string>
+    <string name="invalid_path_message">無効なパスまたは書き込み不可です。デフォルトのパスに復元されました。</string>
+    <string name="error_network">ネットワークエラー: %s</string>
+    <string name="error_parse_failed">解析失敗: %s</string>
+    <string name="error_pixiv_api">Pixiv APIエラー</string>
+    <string name="error_empty_series">シリーズに小説がありません</string>
+    <string name="error_empty_batch">バッチダウンロードの入力が空です</string>
+    <string name="error_invalid_input">無効な入力: %s</string>
+    <string name="progress_fetching_novel">小説情報取得中…</string>
+    <string name="progress_fetching_series">シリーズ情報取得中…</string>
+    <string name="progress_download_complete">ダウンロード完了</string>
+    <string name="progress_series_download">シリーズダウンロード: %1$d/%2$d</string>
+    <string name="progress_batch_download">一括ダウンロード: %1$d/%2$d</string>
+    <string name="progress_batch_complete">一括ダウンロード完了</string>
+    <string name="progress_batch_success">成功: %1$d/%2$d</string>
+    <string name="default_untitled_novel">無題の小説</string>
+    <string name="default_untitled_series">無題のシリーズ</string>
 </resources>

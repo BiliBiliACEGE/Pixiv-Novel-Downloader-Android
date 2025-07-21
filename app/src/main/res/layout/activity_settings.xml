@@ -5,28 +5,45 @@
     android:layout_height="match_parent" android:padding="24dp"
     android:background="@color/white">
 
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:background="@android:color/transparent"
+        android:scaleType="center"
+        android:padding="12dp"
+        android:layout_gravity="left"
+        tools:ignore="RtlHardcoded" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/language"
         android:textSize="18sp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="20dp"
+        />
 
     <Spinner
         android:id="@+id/spinnerLanguage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"/>
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp" />
 
     <TextView
         android:id="@+id/tvTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/theme_light"
+        android:text="@string/themes"
         android:textSize="18sp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        />
 
     <Switch
         android:id="@+id/switchTheme"
@@ -34,20 +51,32 @@
         android:layout_height="wrap_content"
         android:text="@string/theme_switch"
         android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <EditText
         android:id="@+id/etSavePath"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/save_path"
         android:layout_marginBottom="24dp"/>
 
     <Button
+        android:id="@+id/btnChoosePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btnchoose_rounded"
+        android:text="@string/choose_path" />
+
+    <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/save_apply"
         android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@drawable/btnsave_rounded"
         android:textColor="@android:color/white"/>
 </LinearLayout>

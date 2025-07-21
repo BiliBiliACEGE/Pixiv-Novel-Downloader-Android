@@ -26,6 +26,8 @@
         android:text="@string/clear_all"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/btnclear_rounded"
+        />
 
 </RelativeLayout>

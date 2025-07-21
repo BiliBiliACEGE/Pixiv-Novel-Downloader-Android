@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-26:12
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:1:1-28:12
 MERGED from [com.jakewharton.timber:timber:5.0.1] C:\Users\ace20\.gradle\caches\8.13\transforms\07c187a3fd4669701c135e37bfd3e096\transformed\timber-5.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\ace20\.gradle\caches\8.13\transforms\0b35d110c7162f143e3126ee8bdffc66\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ace20\.gradle\caches\8.13\transforms\c76642746b34b26b3d34fd17be4925a0\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -75,9 +75,15 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:6:5-78
 	android:name
 		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:7:5-8:40
+	tools:ignore
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:8:9-37
+	android:name
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:7:22-79
 application
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:8:5-25:19
-INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:8:5-25:19
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:10:5-27:19
+INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:10:5-27:19
 MERGED from [com.jakewharton.timber:timber:5.0.1] C:\Users\ace20\.gradle\caches\8.13\transforms\07c187a3fd4669701c135e37bfd3e096\transformed\timber-5.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.jakewharton.timber:timber:5.0.1] C:\Users\ace20\.gradle\caches\8.13\transforms\07c187a3fd4669701c135e37bfd3e096\transformed\timber-5.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\ace20\.gradle\caches\8.13\transforms\0b35d110c7162f143e3126ee8bdffc66\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
@@ -103,41 +109,41 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\ace20\.gradle\caches\8.13\transforms\b9771f91523b75ad729935354709480c\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:10:9-45
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:12:9-50
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:14:9-50
 	android:icon
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:11:9-45
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:13:9-45
 	android:allowBackup
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:14:9-65
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:16:9-65
 activity#net.ace.PixivNovelDownloader.MainActivity
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:15:9-22:20
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:17:9-24:20
 	android:exported
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:16:13-36
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:18:13-36
 	tools:ignore
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:17:13-40
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:19:13-40
 	android:name
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:15:19-75
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:17:19-75
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:18:13-21:29
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:20:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:22:27-74
 activity#net.ace.PixivNovelDownloader.SettingsActivity
-ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:23:9-24:39
+ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:25:9-26:39
 	android:exported
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:23:19-79
+		ADDED from D:\My project\android pojact\app\src\main\AndroidManifest.xml:25:19-79
 uses-sdk
 INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\My project\android pojact\app\src\main\AndroidManifest.xml

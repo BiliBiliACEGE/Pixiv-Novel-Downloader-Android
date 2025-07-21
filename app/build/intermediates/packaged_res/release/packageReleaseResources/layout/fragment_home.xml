@@ -19,6 +19,7 @@
         android:id="@+id/btnDownload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btndownload_rounded"
         android:text="@string/download"
         android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="@android:color/white"
@@ -34,5 +35,14 @@
         android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/button_outline"
         android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="233dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_description"
+        android:textColor="@android:color/black"
+        android:textSize="16sp">
+    </TextView>
 
 </LinearLayout>

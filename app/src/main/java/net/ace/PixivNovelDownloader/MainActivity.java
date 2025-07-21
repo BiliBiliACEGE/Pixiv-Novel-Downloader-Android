@@ -4,6 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -11,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import net.ace.PixivNovelDownloader.R;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
     private BottomNavigationView bottomNav;
+    private SharedPreferences prefs; // 添加SharedPreferences引用
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -32,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 初始化SharedPreferences
+        prefs = getSharedPreferences("settings", MODE_PRIVATE);
 
         // 设置状态栏颜色为主题色
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
@@ -100,5 +109,42 @@ public class MainActivity extends AppCompatActivity {
         if (viewPager != null) {
             viewPager.setCurrentItem(1, false);
         }
+    }
+
+    // =============== 新增的路径获取方法 ===============
+    /**
+     * 获取当前保存路径（与设置界面一致）
+     */
+    public String getSavePath() {
+        // 从SharedPreferences获取保存的路径
+        String savedPath = prefs.getString("save_path", "");
+
+        // 如果路径为空或者是旧版本路径，使用默认路径
+        if (TextUtils.isEmpty(savedPath) || savedPath.contains("PixivNovels")) {
+            savedPath = getDefaultSavePath();
+            // 更新存储的路径
+            prefs.edit().putString("save_path", savedPath).apply();
+        }
+
+        return savedPath;
+    }
+
+    /**
+     * 获取默认保存路径（与设置界面一致）
+     */
+    private String getDefaultSavePath() {
+        // 使用与下载器相同的路径
+        File defaultDir = new File(getExternalFilesDir(null), "PixivDownloads");
+
+        // 处理可能的null情况
+        if (defaultDir == null) {
+            defaultDir = new File(Environment.getExternalStorageDirectory(),
+                    "Android/data/net.ace.PixivNovelDownloader/files/PixivDownloads");
+        }
+
+        if (!defaultDir.exists()) {
+            defaultDir.mkdirs();
+        }
+        return defaultDir.getAbsolutePath();
     }
 }

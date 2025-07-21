@@ -44,12 +44,7 @@ public class HistoryFragment extends Fragment {
         rvHistory.setAdapter(adapter);
 
         // 设置清空按钮的点击监听器
-        btnClearHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showClearAllConfirmationDialog();
-            }
-        });
+        btnClearHistory.setOnClickListener(view -> showClearAllConfirmationDialog());
 
         return v;
     }

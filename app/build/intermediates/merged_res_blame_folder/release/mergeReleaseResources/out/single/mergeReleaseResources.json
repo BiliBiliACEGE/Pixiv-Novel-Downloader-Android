@@ -12,6 +12,10 @@
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_app_progress_fill.xml.flat",
+        "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\drawable\\app_progress_fill.xml"
+    },
+    {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -56,24 +60,44 @@
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "net.ace.PixivNovelDownloader.app-release-40:/layout_fragment_progress.xml.flat",
-        "source": "net.ace.PixivNovelDownloader.app-main-41:/layout/fragment_progress.xml"
+        "merged": "net.ace.PixivNovelDownloader.app-release-40:/layout_activity_settings.xml.flat",
+        "source": "net.ace.PixivNovelDownloader.app-main-41:/layout/activity_settings.xml"
     },
     {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_btn_outline.xml.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\drawable\\btn_outline.xml"
     },
     {
+        "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\drawable\\ic_arrow_back.xml"
+    },
+    {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "net.ace.PixivNovelDownloader.app-release-40:/layout_fragment_home.xml.flat",
+        "source": "net.ace.PixivNovelDownloader.app-main-41:/layout/fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
     },
     {
+        "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_btnclear_rounded.xml.flat",
+        "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\drawable\\btnclear_rounded.xml"
+    },
+    {
+        "merged": "net.ace.PixivNovelDownloader.app-release-40:/drawable_btndownload_rounded.xml.flat",
+        "source": "net.ace.PixivNovelDownloader.app-main-41:/drawable/btndownload_rounded.xml"
+    },
+    {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\xml_preferences.xml.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\xml\\preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_btnchoose_rounded.xml.flat",
+        "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\drawable\\btnchoose_rounded.xml"
     },
     {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
@@ -100,14 +124,6 @@
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "net.ace.PixivNovelDownloader.app-release-40:/drawable_app_progress_bg.xml.flat",
-        "source": "net.ace.PixivNovelDownloader.app-main-41:/drawable/app_progress_bg.xml"
-    },
-    {
-        "merged": "net.ace.PixivNovelDownloader.app-release-40:/drawable_app_progress_fill.xml.flat",
-        "source": "net.ace.PixivNovelDownloader.app-main-41:/drawable/app_progress_fill.xml"
-    },
-    {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
@@ -116,8 +132,16 @@
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
+        "merged": "net.ace.PixivNovelDownloader.app-release-40:/drawable_btnsave_rounded.xml.flat",
+        "source": "net.ace.PixivNovelDownloader.app-main-41:/drawable/btnsave_rounded.xml"
+    },
+    {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_app_progress_bg.xml.flat",
+        "source": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-main-41:\\drawable\\app_progress_bg.xml"
     },
     {
         "merged": "C:\\Users\\ace20\\.gradle\\daemon\\8.13\\net.ace.PixivNovelDownloader.app-release-40:\\drawable_button_outline.xml.flat",
