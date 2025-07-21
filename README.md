@@ -16,7 +16,7 @@ PC桌面版仓库: [https://github.com/BiliBiliACEGE/Pixiv-Novel-Downloader](htt
 
 ## 使用说明
 1. 输入Pixiv小说ID或链接
-2. 选择下载格式
+2. 在设置里选择下载格式并保存
 3. 点击下载按钮
 
 ## 构建
