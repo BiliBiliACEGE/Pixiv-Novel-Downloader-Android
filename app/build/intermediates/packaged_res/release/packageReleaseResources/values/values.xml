@@ -32,6 +32,7 @@
     <string name="app_description">使用说明\n 1. 输入Pixiv小说ID或链接\n 2. 在设置中选择下载格式并保存\n 3. 点击下载按钮</string>
     <string name="app_name">Pixiv小说下载器</string>
     <string name="app_settings">设置</string>
+    <string name="back_button">返回主界面</string>
     <string name="cancel">取消</string>
     <string name="choose_path">选择保存路径</string>
     <string name="clear_all">清空全部</string>
@@ -82,7 +83,7 @@
     <string name="save_path">保存路径</string>
     <string name="selected_count">已选: %d</string>
     <string name="settings_saved">设置已保存</string>
-    <string name="theme_dark">深色主题</string>
+    <string name="theme_light">日间模式</string>
     <string name="theme_switch">夜间模式</string>
     <string name="themes">主题</string>
 </resources>

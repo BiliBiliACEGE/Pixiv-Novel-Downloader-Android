@@ -21,6 +21,7 @@ drawable button_outline
 drawable edittext_rounded
 drawable ic_arrow_back
 drawable ic_launcher
+id Theme
 id bottomNavigation
 id btnBack
 id btnChoosePath
@@ -39,7 +40,6 @@ id spinnerLanguage
 id switchTheme
 id tvHistoryTitle
 id tvProgress
-id tvTheme
 id viewPager
 layout activity_main
 layout activity_settings
@@ -54,6 +54,7 @@ string all_history
 string app_description
 string app_name
 string app_settings
+string back_button
 string cancel
 string choose_path
 string clear_all
@@ -104,7 +105,7 @@ string save_apply
 string save_path
 string selected_count
 string settings_saved
-string theme_dark
+string theme_light
 string theme_switch
 string themes
 xml preferences

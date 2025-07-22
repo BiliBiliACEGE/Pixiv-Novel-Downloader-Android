@@ -7,13 +7,14 @@
 
     <ImageView
         android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
+        android:layout_width="29dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_back"
-        android:background="@android:color/transparent"
-        android:scaleType="center"
-        android:padding="12dp"
         android:layout_gravity="left"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_arrow_back"
         tools:ignore="RtlHardcoded" />
 
 
@@ -35,7 +36,7 @@
         android:layout_marginBottom="24dp" />
 
     <TextView
-        android:id="@+id/tvTheme"
+        android:id="@+id/Theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/themes"
@@ -60,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/save_path"
+        android:inputType="textMultiLine"
         android:layout_marginBottom="24dp"/>
 
     <Button

@@ -4,6 +4,7 @@
     <string name="app_description">Instructions for use\n 1. Enter the Pixiv novel ID or link\n 2. Select the download format in the settings and save\n 3. Click on the download button</string>
     <string name="app_name">Pixiv Novel Downloader</string>
     <string name="app_settings">Settings</string>
+    <string name="back_button">Back to Main Interface</string>
     <string name="cancel">Cancel</string>
     <string name="choose_path">Select the save path</string>
     <string name="clear_all">Empty it all</string>
@@ -51,7 +52,7 @@
     <string name="save_path">save path</string>
     <string name="selected_count">Selected: %d</string>
     <string name="settings_saved">The settings are saved</string>
-    <string name="theme_dark">Dark theme</string>
-    <string name="theme_switch">Night mode</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_switch">Night Mode</string>
     <string name="themes">Light theme</string>
 </resources>

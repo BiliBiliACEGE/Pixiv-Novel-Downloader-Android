@@ -4,6 +4,7 @@
     <string name="app_description">使用手順\n 1. Pixiv小説のIDまたはリンクを入力します\n 2. 設定でダウンロード形式を選択し、保存します\n 3. ダウンロードボタンをクリックします</string>
     <string name="app_name">Pixiv小説ダウンローダー</string>
     <string name="app_settings">設定</string>
+    <string name="back_button">メイン画面に戻る</string>
     <string name="cancel">取り消し</string>
     <string name="choose_path">保存先を選択する</string>
     <string name="clear_all">すべてを消去する</string>
@@ -51,7 +52,7 @@
     <string name="save_path">保存パス</string>
     <string name="selected_count">選択された: %d</string>
     <string name="settings_saved">設定が保存されました</string>
-    <string name="theme_dark">ダークテーマ</string>
+    <string name="theme_light">昼間モード</string>
     <string name="theme_switch">ナイトモード</string>
     <string name="themes">ライトテーマ</string>
 </resources>
