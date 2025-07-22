@@ -19,7 +19,7 @@
     <string name="open_folder">打开文件夹</string>
     <string name="language">语言</string>
     <string name="themes">主题</string>
-    <string name="theme_dark">深色主题</string>
+    <string name="theme_light">日间模式</string>
     <string name="theme_switch">夜间模式</string>
     <string name="save_apply">保存并应用</string>
     <string name="settings_saved">设置已保存</string>
@@ -53,4 +53,5 @@
     <string name="progress_batch_success">成功: %d/%d</string>
     <string name="default_untitled_novel">未命名小说</string>
     <string name="default_untitled_series">未命名系列</string>
+    <string name="back_button">返回主界面</string>
 </resources>

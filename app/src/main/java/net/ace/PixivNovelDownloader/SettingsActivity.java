@@ -52,12 +52,11 @@ public class SettingsActivity extends AppCompatActivity {
         Button btnSave = findViewById(R.id.btnSave);
         btnBack = findViewById(R.id.btnBack);
         @SuppressLint("UseSwitchCompatOrMaterialCode") Switch switchTheme = findViewById(R.id.switchTheme);
-        TextView tvTheme = findViewById(R.id.tvTheme);
         etSavePath = findViewById(R.id.etSavePath);
         btnChoosePath = findViewById(R.id.btnChoosePath);
 
         if (spinner == null || btnSave == null || switchTheme == null ||
-                tvTheme == null || etSavePath == null || btnBack == null || btnChoosePath == null) {
+                switchTheme == null || etSavePath == null || btnBack == null || btnChoosePath == null) {
             finish();
             return;
         }
@@ -92,11 +91,11 @@ public class SettingsActivity extends AppCompatActivity {
         // =============== 主题控制逻辑 ===============
         boolean isDark = prefs.getBoolean("dark_theme", false);
         switchTheme.setChecked(isDark);
-        updateThemeText(tvTheme, isDark);
+        updateThemeText(switchTheme, isDark);
 
         switchTheme.setOnCheckedChangeListener((buttonView, checked) -> {
             prefs.edit().putBoolean("dark_theme", checked).apply();
-            updateThemeText(tvTheme, checked);
+            updateThemeText(switchTheme, checked);
             applyTheme(prefs);
             recreate();
         });
@@ -189,8 +188,8 @@ public class SettingsActivity extends AppCompatActivity {
     /**
      * 更新主题文本显示
      */
-    private void updateThemeText(TextView tvTheme, boolean isDark) {
-        tvTheme.setText(isDark ? getString(R.string.theme_dark) : getString(R.string.themes));
+    private void updateThemeText(TextView switchTheme, boolean isDark) {
+        switchTheme.setText(isDark ? getString(R.string.theme_switch) : getString(R.string.theme_light));
     }
 
     /**

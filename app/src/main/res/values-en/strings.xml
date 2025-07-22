@@ -19,8 +19,8 @@
     <string name="open_folder">open folder</string>
     <string name="language">language</string>
     <string name="themes">Light theme</string>
-    <string name="theme_dark">Dark theme</string>
-    <string name="theme_switch">Night mode</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_switch">Night Mode</string>
     <string name="save_apply">Save and apply</string>
     <string name="settings_saved">The settings are saved</string>
     <string name="no_items_selected">No items are selected</string>
@@ -53,4 +53,5 @@
     <string name="progress_batch_success">Success: %1$d/%2$d</string>
     <string name="default_untitled_novel">Untitled Novel</string>
     <string name="default_untitled_series">Untitled Series</string>
+    <string name="back_button">Back to Main Interface</string>
 </resources>
