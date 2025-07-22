@@ -16,7 +16,7 @@ PC Desktop version repository: [https://github.com/BiliBiliACEGE/Pixiv-Novel-Dow
 
 ## Usage
 1. Enter Pixiv novel ID or URL
-2. Select download format
+2. Select the download format in the settings and save.
 3. Click download button
 
 ## Build
