@@ -18,6 +18,9 @@ public class HomeFragment extends Fragment {
     private EditText etInput;
     private Button btnDownload;
     private Button btnSettings;
+
+    private Button btnHelp;
+
     private DownloadManager downloadManager;
 
     @Nullable
@@ -27,6 +30,12 @@ public class HomeFragment extends Fragment {
         etInput = v.findViewById(R.id.etInput);
         btnDownload = v.findViewById(R.id.btnDownload);
         btnSettings = v.findViewById(R.id.btnSettings);
+        btnHelp = v.findViewById(R.id.btnHelp);
+        btnHelp.setOnClickListener(view -> {
+            // 跳转到帮助页面
+            Intent intent = new Intent(getActivity(), HelpActivity.class);
+            startActivity(intent);
+        });
         // 传入Context参数
         downloadManager = new DownloadManager(requireContext());
 

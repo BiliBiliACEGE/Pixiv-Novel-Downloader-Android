@@ -1424,6 +1424,7 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color background_color
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -3050,6 +3051,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edittext_rounded
+drawable help_rounded
 drawable ic_arrow_back
 drawable ic_arrow_back_black_24
 drawable ic_arrow_down_24dp
@@ -3253,6 +3255,7 @@ id btnBack
 id btnChoosePath
 id btnClearHistory
 id btnDownload
+id btnHelp
 id btnSave
 id btnSettings
 id buttonPanel
@@ -3655,6 +3658,8 @@ id transition_transform
 id triangle
 id tvHistoryTitle
 id tvProgress
+id tv_help_content
+id tv_help_title
 id unchecked
 id uniform
 id unlabeled
@@ -3795,6 +3800,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_help
 layout activity_main
 layout activity_settings
 layout custom_dialog
@@ -3929,9 +3935,10 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_link
 string all_history
 string androidx_startup
-string app_description
+string app_help
 string app_name
 string app_settings
 string appbar_scrolling_view_behavior
@@ -3950,12 +3957,14 @@ string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
 string cancel
+string cannot_write_dir
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string choose_path
 string clear_all
 string clear_text_end_icon_content_description
+string code_for_future
 string confirm_clear_all_history
 string confirm_delete
 string confirm_delete_history
@@ -3976,6 +3985,8 @@ string error_invalid_input
 string error_network
 string error_parse_failed
 string error_pixiv_api
+string error_save_dir
+string error_write_failed
 string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -3984,6 +3995,8 @@ string file_format
 string format_html
 string format_md
 string format_txt
+string help_content
+string help_title
 string hide_bottom_view_on_scroll_behavior
 string history_title
 string icon_content_description
@@ -4107,6 +4120,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permission_error
 string preference_copied
 string progress_batch_complete
 string progress_batch_download
@@ -5453,4 +5467,5 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml file_paths
 xml preferences

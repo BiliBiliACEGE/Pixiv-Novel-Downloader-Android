@@ -35,7 +35,8 @@
     <string name="all_history">Full history</string>
     <string name="selected_count">Selected: %d</string>
     <string name="default_save_path">Save the path by default</string>
-    <string name="app_description">Instructions for use\n 1. Enter the Pixiv novel ID or link\n 2. Select the download format in the settings and save\n 3. Click on the download button</string>
+    <string name="error_write_failed">File write failed</string>
+    <string name="help_content"> 1. Enter the Pixiv novel ID or link\n2. Select the download format in the settings and save\n3. Click on the download button</string>
     <string name="choose_path">Select the save path</string>
     <string name="invalid_path_message">The path is invalid or unwritable and the default path has been restored</string>
     <string name="error_network">Network error: %s</string>
@@ -54,4 +55,11 @@
     <string name="default_untitled_novel">Untitled Novel</string>
     <string name="default_untitled_series">Untitled Series</string>
     <string name="back_button">Back to Main Interface</string>
+    <string name="app_help">Use help</string>
+    <string name="help_title">Instructions for use</string>
+    <string name="code_for_future">Feature development, stay tuned!</string>
+    <string name="about_link">Open source repositories:\n https://github.com/BiliBiliACEGE/Pixiv-Novel-Downloader-Android</string>
+    <string name="cannot_write_dir">Unable to write to the directory</string>
+    <string name="permission_error">Permission acquisition failed</string>
+    <string name="error_save_dir">Save directory creation failed</string>
 </resources>

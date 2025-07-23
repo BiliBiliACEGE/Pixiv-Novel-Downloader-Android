@@ -35,7 +35,8 @@
     <string name="all_history">すべての履歴</string>
     <string name="selected_count">選択された: %d</string>
     <string name="default_save_path">デフォルト保存先</string>
-    <string name="app_description">使用手順\n 1. Pixiv小説のIDまたはリンクを入力します\n 2. 設定でダウンロード形式を選択し、保存します\n 3. ダウンロードボタンをクリックします</string>
+    <string name="error_write_failed">ファイルの書き込みに失敗しました</string>
+    <string name="help_content"> 1. Pixiv小説のIDまたはリンクを入力します\n2. 設定でダウンロード形式を選択し、保存します\n3. ダウンロードボタンをクリックします</string>
     <string name="choose_path">保存先を選択する</string>
     <string name="invalid_path_message">無効なパスまたは書き込み不可です。デフォルトのパスに復元されました。</string>
     <string name="error_network">ネットワークエラー: %s</string>
@@ -54,4 +55,11 @@
     <string name="default_untitled_novel">無題の小説</string>
     <string name="default_untitled_series">無題のシリーズ</string>
     <string name="back_button">メイン画面に戻る</string>
+    <string name="app_help">使用ヘルプ</string>
+    <string name="help_title">使用説明</string>
+    <string name="code_for_future">機能開発中です。ご期待ください！</string>
+    <string name="about_link">オープンソースリポジトリ:\n https://github.com/BiliBiliACEGE/Pixiv-Novel-Downloader-Android</string>
+    <string name="cannot_write_dir">そのディレクトリに書き込むことができません</string>
+    <string name="permission_error">権限の取得に失敗しました</string>
+    <string name="error_save_dir">保存ディレクトリの作成に失敗しました</string>
 </resources>

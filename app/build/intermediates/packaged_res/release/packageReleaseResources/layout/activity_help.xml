@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 返回按钮固定在左上角 -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="29dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="2dp"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="@string/back_button" />
+
+    <!-- 标题居中显示 -->
+    <TextView
+        android:id="@+id/tv_help_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnBack"
+        android:text="@string/help_title"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <!-- 内容区域居中且宽度自适应 -->
+    <TextView
+        android:id="@+id/tv_help_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_help_title"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="600dp"
+        android:padding="16dp"
+        android:text="@string/help_content"
+        android:background="@drawable/help_rounded"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <!-- 链接在内容下方居中 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_help_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:autoLink="web"
+        android:text="@string/about_link"/>
+</RelativeLayout>

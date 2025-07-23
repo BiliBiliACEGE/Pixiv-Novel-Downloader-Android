@@ -30,20 +30,21 @@
         android:id="@+id/btnSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:text="@string/app_settings"
         android:backgroundTint="@color/white"
         android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/button_outline"
         android:layout_marginTop="0dp"/>
 
-    <TextView
+    <Button
+        android:id="@+id/btnHelp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/app_description"
-        android:textColor="@android:color/black"
-        android:textSize="16sp">
-    </TextView>
+        android:text="@string/app_help"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/button_outline"
+        android:layout_marginTop="0dp"/>
 
 </LinearLayout>

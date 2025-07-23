@@ -3,4 +3,5 @@
     <color name="white">#FFFFFF</color>
     <color name="progress_color">#4CAF50</color>
     <color name="progress_background_color">#C5E1A5</color>
+    <color name="background_color">#F8F9FA</color>
 </resources>

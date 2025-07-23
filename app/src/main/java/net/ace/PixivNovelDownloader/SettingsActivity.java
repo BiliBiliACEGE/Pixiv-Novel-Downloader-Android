@@ -8,14 +8,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import android.widget.TextView;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -26,11 +24,13 @@ import java.io.File;
 
 public class SettingsActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_CHOOSE_DIR = 1001;
+    private static final String TAG = "SettingsActivity";
 
     private EditText etSavePath;
     private SharedPreferences prefs;
     private ImageView btnBack;
     private Button btnChoosePath;
+    private Uri mCurrentDirUri; // 存储当前选择的目录URI
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -43,8 +43,6 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = getSharedPreferences("settings", MODE_PRIVATE);
-        applyTheme(prefs);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
@@ -55,8 +53,7 @@ public class SettingsActivity extends AppCompatActivity {
         etSavePath = findViewById(R.id.etSavePath);
         btnChoosePath = findViewById(R.id.btnChoosePath);
 
-        if (spinner == null || btnSave == null || switchTheme == null ||
-                switchTheme == null || etSavePath == null || btnBack == null || btnChoosePath == null) {
+        if (spinner == null || btnSave == null || switchTheme == null || etSavePath == null || btnBack == null || btnChoosePath == null) {
             finish();
             return;
         }
@@ -77,16 +74,30 @@ public class SettingsActivity extends AppCompatActivity {
         else if ("ja".equals(lang)) idx = 2;
         spinner.setSelection(idx);
 
-        // =============== 修复的路径显示逻辑 ===============
-        String savedPath = prefs.getString("save_path", "");
+        // =============== 改进的路径初始化逻辑 ===============
+        String savedUri = prefs.getString("save_path_uri", null);
+        String savedPath = prefs.getString("save_path", getDefaultSavePath());
 
-        // 修复旧版本路径不一致问题
-        if (TextUtils.isEmpty(savedPath) || savedPath.contains("PixivNovels")) {
-            savedPath = getDefaultSavePath();
-            // 更新存储的路径
-            prefs.edit().putString("save_path", savedPath).apply();
+        if (!TextUtils.isEmpty(savedUri)) {
+            mCurrentDirUri = Uri.parse(savedUri);
+            try {
+                DocumentFile dir = DocumentFile.fromTreeUri(this, mCurrentDirUri);
+                if (dir != null && dir.exists() && dir.canWrite()) {
+                    etSavePath.setText(dir.getUri().toString()); // 显示URI
+                } else {
+                    etSavePath.setText(savedPath);
+                }
+            } catch (SecurityException e) {
+                etSavePath.setText(savedPath);
+            }
+        } else {
+            // 旧版路径处理
+            if (TextUtils.isEmpty(savedPath) || savedPath.contains("PixivNovels")) {
+                savedPath = getDefaultSavePath();
+                prefs.edit().putString("save_path", savedPath).apply();
+            }
+            etSavePath.setText(savedPath);
         }
-        etSavePath.setText(savedPath);
 
         // =============== 主题控制逻辑 ===============
         boolean isDark = prefs.getBoolean("dark_theme", false);
@@ -94,10 +105,9 @@ public class SettingsActivity extends AppCompatActivity {
         updateThemeText(switchTheme, isDark);
 
         switchTheme.setOnCheckedChangeListener((buttonView, checked) -> {
-            prefs.edit().putBoolean("dark_theme", checked).apply();
-            updateThemeText(switchTheme, checked);
-            applyTheme(prefs);
-            recreate();
+            Toast.makeText(getApplicationContext(),
+                    R.string.code_for_future,
+                    Toast.LENGTH_SHORT).show();
         });
 
         // 保存按钮监听器
@@ -106,20 +116,28 @@ public class SettingsActivity extends AppCompatActivity {
             String selectedLang = values[sel];
             String inputPath = etSavePath.getText().toString().trim();
 
-            // 验证路径有效性
-            if (!isPathValid(inputPath)) {
-                Toast.makeText(this, R.string.invalid_path_message, Toast.LENGTH_LONG).show();
-                inputPath = getDefaultSavePath();
-                etSavePath.setText(inputPath);
+            SharedPreferences.Editor editor = prefs.edit();
+
+            // 保存URI或传统路径
+            if (mCurrentDirUri != null) {
+                editor.putString("save_path_uri", mCurrentDirUri.toString());
+                editor.remove("save_path"); // 清除旧版路径
+            } else {
+                // 验证传统路径有效性
+                if (!isPathValid(inputPath)) {
+                    Toast.makeText(this, R.string.invalid_path_message, Toast.LENGTH_LONG).show();
+                    inputPath = getDefaultSavePath();
+                    etSavePath.setText(inputPath);
+                }
+                editor.putString("save_path", inputPath);
+                editor.remove("save_path_uri"); // 清除URI
             }
 
-            prefs.edit()
-                    .putString("language", selectedLang)
-                    .putString("save_path", inputPath)
+            editor.putString("language", selectedLang)
                     .apply();
 
             Toast.makeText(this,
-                    getString(R.string.settings_saved) + ": " + inputPath,
+                    getString(R.string.settings_saved),
                     Toast.LENGTH_LONG).show();
 
             restartMainActivity();
@@ -139,23 +157,24 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_CHOOSE_DIR && resultCode == RESULT_OK) {
-            if (data != null) {
+            if (data != null && data.getData() != null) {
                 Uri treeUri = data.getData();
-                if (treeUri != null) {
-                    getContentResolver().takePersistableUriPermission(
-                            treeUri,
-                            Intent.FLAG_GRANT_READ_URI_PERMISSION |
-                                    Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-                    );
+                final int takeFlags = data.getFlags() & (Intent.FLAG_GRANT_READ_URI_PERMISSION |
+                        Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
 
-                    DocumentFile docFile = DocumentFile.fromTreeUri(this, treeUri);
-                    if (docFile != null && docFile.exists()) {
-                        String path = docFile.getUri().getPath();
-                        if (path != null && path.startsWith("/tree/")) {
-                            path = path.replace("/tree/", "");
-                        }
-                        etSavePath.setText(path);
+                try {
+                    // 获取持久化权限
+                    getContentResolver().takePersistableUriPermission(treeUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+                    DocumentFile dir = DocumentFile.fromTreeUri(this, treeUri);
+                    if (dir != null && dir.exists() && dir.canWrite()) {
+                        mCurrentDirUri = treeUri;
+                        etSavePath.setText(treeUri.toString());
+                    } else {
+                        Toast.makeText(this, R.string.cannot_write_dir, Toast.LENGTH_SHORT).show();
                     }
+                } catch (SecurityException e) {
+                    Toast.makeText(this, R.string.permission_error, Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -173,16 +192,6 @@ public class SettingsActivity extends AppCompatActivity {
         } catch (SecurityException e) {
             return false;
         }
-    }
-
-    /**
-     * 应用主题到整个应用
-     */
-    private void applyTheme(SharedPreferences prefs) {
-        boolean isDark = prefs.getBoolean("dark_theme", false);
-        AppCompatDelegate.setDefaultNightMode(
-                isDark ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO
-        );
     }
 
     /**
