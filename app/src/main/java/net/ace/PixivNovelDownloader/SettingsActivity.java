@@ -105,7 +105,7 @@ public class SettingsActivity extends AppCompatActivity {
         updateThemeText(switchTheme, isDark);
 
         switchTheme.setOnCheckedChangeListener((buttonView, checked) -> {
-            Toast.makeText(getApplicationContext(),
+            Toast.makeText(SettingsActivity.this,
                     R.string.code_for_future,
                     Toast.LENGTH_SHORT).show();
         });

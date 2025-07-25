@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">Pixiv小说下载器</string>
     <string name="menu_home">主页</string>
     <string name="menu_progress">进度</string>
