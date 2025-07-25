@@ -1,5 +1,7 @@
 package net.ace.PixivNovelDownloader;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,6 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HelpActivity extends AppCompatActivity {
 
     private ImageView btnBack;
+
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        SharedPreferences prefs = newBase.getSharedPreferences("settings", MODE_PRIVATE);
+        String lang = prefs.getString("language", "zh");
+        super.attachBaseContext(LocaleHelper.setLocale(newBase, lang));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
