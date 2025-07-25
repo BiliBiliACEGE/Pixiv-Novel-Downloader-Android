@@ -4,9 +4,11 @@
     <string name="menu_progress">Progress</string>
     <string name="menu_history">History</string>
     <string name="input_hint">Enter Pixiv novel ID or link</string>
+    <string name="id_error">Unable to recognize ID or link</string>
     <string name="download">Download</string>
     <string name="invalid_id">Invalid ID</string>
     <string name="download_success">Download Success</string>
+    <string name="download_complete">Download complete: %s</string>
     <string name="download_failed">Download Failed</string>
     <string name="history_title">Download History</string>
     <string name="progress_waiting">Waiting for task</string>
@@ -48,8 +50,9 @@
     <string name="progress_fetching_novel">Fetching novel info…</string>
     <string name="progress_fetching_series">Fetching series info…</string>
     <string name="progress_download_complete">Download complete</string>
-    <string name="progress_series_download">Series download: %1$d/%2$d</string>
-    <string name="progress_batch_download">Batch download: %1$d/%2$d</string>
+    <string name="pro_download_failed">Download failed: %s</string>
+    <string name="progress_series_download">Series download: %d/%d</string>
+    <string name="progress_batch_download">Batch download: %d/%d</string>
     <string name="progress_batch_complete">Batch download complete</string>
     <string name="progress_batch_success">Success: %1$d/%2$d</string>
     <string name="default_untitled_novel">Untitled Novel</string>
@@ -62,4 +65,12 @@
     <string name="cannot_write_dir">Unable to write to the directory</string>
     <string name="permission_error">Permission acquisition failed</string>
     <string name="error_save_dir">Save directory creation failed</string>
+    <string name="input_error">Please enter the Pixiv novel ID or link.</string>
+    <string name="dialog_title">Confirm the action</string>
+    <string name="dialog_message">Are you sure you want to clear all your history? This action is not reversed.</string>
+    <string name="clear_button">empty</string>
+    <string name="delete_button">Delete</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="remove_history">Delete history</string>
+    <string name="remove_history_message">Are you sure you want to delete this history? \\n\"%s\"</string>
 </resources>

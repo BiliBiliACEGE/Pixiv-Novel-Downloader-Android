@@ -42,12 +42,12 @@ public class HomeFragment extends Fragment {
         btnDownload.setOnClickListener(view -> {
             String input = etInput.getText().toString().trim();
             if (TextUtils.isEmpty(input)) {
-                Toast.makeText(getContext(), "请输入Pixiv小说ID或链接", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.input_error, Toast.LENGTH_SHORT).show();
                 return;
             }
             DownloadManager.ContentIdResult result = downloadManager.extractContentId(input);
             if (result == null) {
-                Toast.makeText(getContext(), "无法识别ID或链接", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.id_error, Toast.LENGTH_SHORT).show();
                 return;
             }
             // 跳转到进度页
@@ -62,12 +62,12 @@ public class HomeFragment extends Fragment {
                 }
                 @Override
                 public void onSuccess(String title, String filePath) {
-                    ProgressFragment.setProgress(100, "下载完成: " + title);
+                    ProgressFragment.setProgress(100, R.string.download_complete + title);
                     HistoryManager.addHistory(getContext(), title + " - " + filePath);
                 }
                 @Override
                 public void onError(String errorMsg) {
-                    ProgressFragment.setProgress(0, "失败: " + errorMsg);
+                    ProgressFragment.setProgress(0, R.string.pro_download_failed + errorMsg);
                 }
             });
         });

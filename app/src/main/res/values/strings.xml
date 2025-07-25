@@ -4,6 +4,8 @@
     <string name="menu_progress">进度</string>
     <string name="menu_history">历史</string>
     <string name="input_hint">输入Pixiv小说ID或链接</string>
+    <string name="input_error">请输入Pixiv小说ID或链接</string>
+    <string name="id_error">无法识别ID或链接</string>
     <string name="download">下载</string>
     <string name="invalid_id">无效的ID</string>
     <string name="download_success">下载成功</string>
@@ -51,6 +53,8 @@
     <string name="progress_fetching_novel">获取小说信息…</string>
     <string name="progress_fetching_series">获取系列信息…</string>
     <string name="progress_download_complete">下载完成</string>
+    <string name="download_complete">下载完成: %s</string>
+    <string name="pro_download_failed">下载失败: %s</string>
     <string name="progress_series_download">系列下载: %d/%d</string>
     <string name="progress_batch_download">批量下载: %d/%d</string>
     <string name="progress_batch_complete">批量下载完成</string>
@@ -62,4 +66,11 @@
     <string name="help_title">使用说明</string>
     <string name="code_for_future">功能开发中，敬请期待！</string>
     <string name="about_link">开源仓库:\n https://github.com/BiliBiliACEGE/Pixiv-Novel-Downloader-Android</string>
+    <string name="dialog_title">确认操作</string>
+    <string name="dialog_message">确定要清空所有历史记录吗？此操作不可恢复。</string>
+    <string name="clear_button">清空</string>
+    <string name="delete_button">删除</string>
+    <string name="cancel_button">取消</string>
+    <string name="remove_history">删除历史记录</string>
+    <string name="remove_history_message">确定要删除这条历史记录吗？\\n\"%s\"</string>
 </resources>

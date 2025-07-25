@@ -53,9 +53,9 @@ public class HistoryFragment extends Fragment {
     private void showClearAllConfirmationDialog() {
         if (getContext() == null) return;
         new AlertDialog.Builder(getContext())
-                .setTitle("确认操作")
-                .setMessage("确定要清空所有历史记录吗？此操作不可恢复。")
-                .setPositiveButton("清空", (dialog, which) -> {
+                .setTitle(R.string.dialog_title)
+                .setMessage(R.string.dialog_message)
+                .setPositiveButton(R.string.clear_button, (dialog, which) -> {
                     HistoryManager.clearHistory(getContext());
                     historyList.clear(); // 清空列表
                     adapter.notifyDataSetChanged(); // 通知适配器数据已更改
@@ -64,24 +64,25 @@ public class HistoryFragment extends Fragment {
                     // historyList.addAll(HistoryManager.getHistory(getContext()));
                     // adapter.notifyDataSetChanged();
                 })
-                .setNegativeButton("取消", null)
+                .setNegativeButton(R.string.cancel_button, null)
                 .show();
     }
 
 
     // 显示删除单条历史记录的确认对话框
     private void showDeleteConfirmationDialog(String item, int position) {
+        String message = getString(R.string.remove_history_message) + "\n\"" + item + "\"";
         if (getContext() == null) return; // 检查 context 是否为 null
         new AlertDialog.Builder(getContext()) // 使用 getContext()
-                .setTitle("删除历史记录")
-                .setMessage("确定要删除这条历史记录吗？\n\"" + item + "\"")
-                .setPositiveButton("删除", (dialog, which) -> {
+                .setTitle(R.string.remove_history)
+                .setMessage(message)
+                .setPositiveButton(R.string.delete_button, (dialog, which) -> {
                     HistoryManager.removeHistoryItem(getContext(), item); // 从 SharedPreferences 中删除
                     historyList.remove(position); // 从当前列表中删除
                     adapter.notifyItemRemoved(position); // 通知适配器特定项已删除
                     adapter.notifyItemRangeChanged(position, historyList.size()); // 更新后续项目的位置
                 })
-                .setNegativeButton("取消", null)
+                .setNegativeButton(R.string.cancel_button, null)
                 .show();
     }
 

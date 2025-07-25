@@ -4,9 +4,11 @@
     <string name="menu_progress">進捗</string>
     <string name="menu_history">履歴</string>
     <string name="input_hint">Pixiv小説IDまたはリンクを入力</string>
+    <string name="id_error">IDまたはリンクを認識できません</string>
     <string name="download">ダウンロード</string>
     <string name="invalid_id">無効なID</string>
     <string name="download_success">ダウンロード成功</string>
+    <string name="download_complete">ダウンロード完了: %s</string>
     <string name="download_failed">ダウンロード失敗</string>
     <string name="history_title">ダウンロード履歴</string>
     <string name="progress_waiting">タスク待ち</string>
@@ -48,8 +50,9 @@
     <string name="progress_fetching_novel">小説情報取得中…</string>
     <string name="progress_fetching_series">シリーズ情報取得中…</string>
     <string name="progress_download_complete">ダウンロード完了</string>
-    <string name="progress_series_download">シリーズダウンロード: %1$d/%2$d</string>
-    <string name="progress_batch_download">一括ダウンロード: %1$d/%2$d</string>
+    <string name="pro_download_failed">ダウンロードに失敗しました: %s</string>
+    <string name="progress_series_download">シリーズダウンロード: %d/%d</string>
+    <string name="progress_batch_download">一括ダウンロード: %d/%d</string>
     <string name="progress_batch_complete">一括ダウンロード完了</string>
     <string name="progress_batch_success">成功: %1$d/%2$d</string>
     <string name="default_untitled_novel">無題の小説</string>
@@ -62,4 +65,12 @@
     <string name="cannot_write_dir">そのディレクトリに書き込むことができません</string>
     <string name="permission_error">権限の取得に失敗しました</string>
     <string name="error_save_dir">保存ディレクトリの作成に失敗しました</string>
+    <string name="input_error">Pixiv小説のIDまたはリンクを入力してください</string>
+    <string name="dialog_title">操作を確認する</string>
+    <string name="dialog_message">すべての履歴をクリアしてもよろしいですか？この操作は元に戻せません。</string>
+    <string name="clear_button">クリア</string>
+    <string name="delete_button">削除</string>
+    <string name="cancel_button">取り消し</string>
+    <string name="remove_history">履歴を削除する</string>
+    <string name="remove_history_message">この履歴を削除してもよろしいですか？\\n\"%s\"</string>
 </resources>
